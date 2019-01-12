@@ -1,12 +1,20 @@
-﻿using System;
+﻿using AlaFibonacci.Core;
+using CommandLine;
+using System;
 
 namespace AlaFibonacci
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Parser.Default.ParseArguments<CommandLineOptions>(args)
+                .WithParsed(option =>
+                {
+                    var calculated = AlaFibonacciCalculator.Calculate(option.Index);
+
+                    Console.WriteLine($"Calculated value is: {calculated}");
+                });
         }
     }
 }
