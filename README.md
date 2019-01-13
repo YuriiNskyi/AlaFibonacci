@@ -46,3 +46,13 @@ Intel Core i5-7200U CPU 2.50GHz (Kaby Lake), 1 CPU, 4 logical and 2 physical cor
 | **Calculate** |  **25000** |  **45,297,977.70 ns** |  **2,399,107.524 ns** |   **7,036,167.067 ns** |  **45,661,123.08 ns** |
 | **Calculate** |  **50000** | **174,762,020.75 ns** |  **9,129,784.471 ns** |  **26,632,009.832 ns** | **174,858,333.33 ns** |
 | **Calculate** | **100000** | **691,708,238.20 ns** | **37,321,593.001 ns** | **103,417,958.413 ns** | **685,595,900.00 ns** |
+
+## Example of usage
+Main console application:
+```
+dotnet .\AlaFibonacci.dll -i <your index>
+```
+Benchmarks:
+```
+dotnet .\AlaFibonacci.Benchmarks.dll
+```
